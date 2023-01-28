@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SS730_Communication_Platform", "SS730 Communication Platform\SS730_Communication_Platform.vbproj", "{B3E06FD3-53B8-4635-B566-8FDF30682601}"
+EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "SS730 Setup", "SS730 Setup\SS730 Setup.isproj", "{3912A29B-05D9-41D6-96CF-2A4E829A2D67}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B3E06FD3-53B8-4635-B566-8FDF30682601} = {B3E06FD3-53B8-4635-B566-8FDF30682601}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|x86 = CD_ROM|x86
+		Debug|x86 = Debug|x86
+		DVD-5|x86 = DVD-5|x86
+		Release|x86 = Release|x86
+		SingleImage|x86 = SingleImage|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3E06FD3-53B8-4635-B566-8FDF30682601}.CD_ROM|x86.ActiveCfg = Release|x86
+		{B3E06FD3-53B8-4635-B566-8FDF30682601}.CD_ROM|x86.Build.0 = Release|x86
+		{B3E06FD3-53B8-4635-B566-8FDF30682601}.Debug|x86.ActiveCfg = Debug|x86
+		{B3E06FD3-53B8-4635-B566-8FDF30682601}.Debug|x86.Build.0 = Debug|x86
+		{B3E06FD3-53B8-4635-B566-8FDF30682601}.DVD-5|x86.ActiveCfg = Debug|x86
+		{B3E06FD3-53B8-4635-B566-8FDF30682601}.DVD-5|x86.Build.0 = Debug|x86
+		{B3E06FD3-53B8-4635-B566-8FDF30682601}.Release|x86.ActiveCfg = Release|x86
+		{B3E06FD3-53B8-4635-B566-8FDF30682601}.Release|x86.Build.0 = Release|x86
+		{B3E06FD3-53B8-4635-B566-8FDF30682601}.SingleImage|x86.ActiveCfg = Release|x86
+		{B3E06FD3-53B8-4635-B566-8FDF30682601}.SingleImage|x86.Build.0 = Release|x86
+		{3912A29B-05D9-41D6-96CF-2A4E829A2D67}.CD_ROM|x86.ActiveCfg = CD_ROM
+		{3912A29B-05D9-41D6-96CF-2A4E829A2D67}.CD_ROM|x86.Build.0 = CD_ROM
+		{3912A29B-05D9-41D6-96CF-2A4E829A2D67}.Debug|x86.ActiveCfg = DVD-5
+		{3912A29B-05D9-41D6-96CF-2A4E829A2D67}.Debug|x86.Build.0 = DVD-5
+		{3912A29B-05D9-41D6-96CF-2A4E829A2D67}.DVD-5|x86.ActiveCfg = DVD-5
+		{3912A29B-05D9-41D6-96CF-2A4E829A2D67}.DVD-5|x86.Build.0 = DVD-5
+		{3912A29B-05D9-41D6-96CF-2A4E829A2D67}.Release|x86.ActiveCfg = SingleImage
+		{3912A29B-05D9-41D6-96CF-2A4E829A2D67}.Release|x86.Build.0 = SingleImage
+		{3912A29B-05D9-41D6-96CF-2A4E829A2D67}.SingleImage|x86.ActiveCfg = SingleImage
+		{3912A29B-05D9-41D6-96CF-2A4E829A2D67}.SingleImage|x86.Build.0 = SingleImage
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DBD7681-581E-45F9-A858-0EF918F85F1C}
+	EndGlobalSection
+EndGlobal

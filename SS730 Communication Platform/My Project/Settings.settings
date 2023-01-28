@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="NomeUtente" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">12345</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">98765</Value>
+    </Setting>
+    <Setting Name="Pincode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">00000000</Value>
+    </Setting>
+    <Setting Name="cfProprietario" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">FRSRFL72R25H282U</Value>
+    </Setting>
+    <Setting Name="codRegione" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="codSSA" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">8888</Value>
+    </Setting>
+    <Setting Name="codASL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">101</Value>
+    </Setting>
+    <Setting Name="DefaultXmlPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\</Value>
+    </Setting>
+    <Setting Name="Color1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">233; 240; 249</Value>
+    </Setting>
+    <Setting Name="Struttura" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">RADIOLOGIA TIBURTINO</Value>
+    </Setting>
+    <Setting Name="Color2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">233; 240; 249</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

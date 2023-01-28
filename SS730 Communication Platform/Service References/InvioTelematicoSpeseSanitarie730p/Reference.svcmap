@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fc7287ce-ec06-41c4-9533-677ca46791ad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\Lavoro\Sviluppo\Health.NET Code\TS SS730\SS730 Communication Platform\SS730 Communication Platform\Service References\InvioTelematicoSpeseSanitarie730p\InvioTelematicoSpeseSanitarie730p.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InvioTelematicoSpeseSanitarie730pService.wsdl" MetadataType="Wsdl" ID="7883bced-9085-4cbb-8905-f7738e9ff06e" SourceId="1" SourceUrl="file:///C:/Lavoro/Sviluppo/Health.NET Code/TS SS730/SS730 Communication Platform/SS730 Communication Platform/Service References/InvioTelematicoSpeseSanitarie730p/InvioTelematicoSpeseSanitarie730p.wsdl" />
+    <MetadataFile FileName="InvioTelematicoSpeseSanitarie730p_schema1.xsd" MetadataType="Schema" ID="1ba2bbf8-ab39-4fe3-af75-495f2cbfc068" SourceId="1" SourceUrl="file:///C:/Lavoro/Sviluppo/Health.NET Code/TS SS730/SS730 Communication Platform/SS730 Communication Platform/Service References/InvioTelematicoSpeseSanitarie730p/InvioTelematicoSpeseSanitarie730p_schema1.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

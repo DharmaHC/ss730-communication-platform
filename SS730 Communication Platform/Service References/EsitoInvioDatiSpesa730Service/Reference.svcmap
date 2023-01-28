@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a5fbae3b-a20d-41d5-ae4a-3ef633c064d1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\Lavoro\Sviluppo\Health.NET Code\TS SS730\SS730 Communication Platform\SS730 Communication Platform\Service References\EsitoInvio\EsitoInvioDatiSpesa730Service.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EsitoInvioDatiSpesa730Service_schema.xsd" MetadataType="Schema" ID="54b0fbaa-403f-48f3-a0e6-3dcc4cbc2a1d" SourceId="1" SourceUrl="file:///C:/Lavoro/Sviluppo/Health.NET Code/TS SS730/SS730 Communication Platform/SS730 Communication Platform/Service References/EsitoInvio/EsitoInvioDatiSpesa730Service_schema.xsd" />
+    <MetadataFile FileName="EsitoInvioDatiSpesa730Service.wsdl" MetadataType="Wsdl" ID="ba814a5a-20b8-4af7-a00e-a1773fdb0996" SourceId="1" SourceUrl="file:///C:/Lavoro/Sviluppo/Health.NET Code/TS SS730/SS730 Communication Platform/SS730 Communication Platform/Service References/EsitoInvio/EsitoInvioDatiSpesa730Service.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

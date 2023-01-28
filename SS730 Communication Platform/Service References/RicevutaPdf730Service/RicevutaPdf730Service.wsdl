@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ricevutapdf.p730.sanita.sogei.it/" name="RicevutaPdf730Service" targetNamespace="http://ricevutapdf.p730.sanita.sogei.it/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="RicevutaPdf730Service_schema.xsd" namespace="http://ricevutapdf.p730.sanita.sogei.it/" />
+    </xsd:schema>
+  </types>
+  <message name="RicevutaPdf">
+    <part name="parameters" element="tns:RicevutaPdf" />
+  </message>
+  <message name="RicevutaPdfResponse">
+    <part name="parameters" element="tns:RicevutaPdfResponse" />
+  </message>
+  <portType name="RicevutaPdf730">
+    <operation name="RicevutaPdf">
+      <input message="tns:RicevutaPdf" />
+      <output message="tns:RicevutaPdfResponse" />
+    </operation>
+  </portType>
+  <binding name="RicevutaPdf730PortBinding" type="tns:RicevutaPdf730">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="RicevutaPdf">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ricevutePdf">
+    <port name="RicevutaPdf730Port" binding="tns:RicevutaPdf730PortBinding">
+      <soap:address location="https://invioSS730p.sanita.finanze.it/Ricevute730ServiceWeb/ricevutePdf" />
+    </port>
+  </service>
+</definitions>
