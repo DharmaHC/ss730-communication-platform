@@ -33,35 +33,51 @@ Public Class mainForm
 
 
     Private Sub mainForm_Initialized(sender As Object, e As EventArgs) Handles Me.Initialized
-        Me.StartPosition = FormStartPosition.CenterScreen
+        Try
+            Me.StartPosition = FormStartPosition.CenterScreen
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub RadForm1_Load(sender As Object, e As EventArgs) Handles Me.Load
-        RadButtonSfoglia_FileASCII.Enabled = True
-        RadButtonCaricaFileASCII.Enabled = False
-        RadButtonGeneraXML.Enabled = False
-        DB = Application.StartupPath & "\TS730_Data.mdb"
-        Me.RadPageViewMainForm.SelectedPage = Me.RadPageViewSettingsPage
+        Try
 
-        RadDropDownListReadSettingsFrom.SelectedIndex = 0
-        Me.RadPageViewComunicazioniPage.Enabled = False
-        Me.RadPageViewPreparazioniPage.Enabled = False
+            RadButtonSfoglia_FileASCII.Enabled = True
+            RadButtonCaricaFileASCII.Enabled = False
+            RadButtonGeneraXML.Enabled = False
+            DB = Application.StartupPath & "\TS730_Data.mdb"
+            Me.RadPageViewMainForm.SelectedPage = Me.RadPageViewSettingsPage
 
-        RadGridViewElencoSessioni.AutoGenerateColumns = False
+            RadDropDownListReadSettingsFrom.SelectedIndex = 0
+            Me.RadPageViewComunicazioniPage.Enabled = False
+            Me.RadPageViewPreparazioniPage.Enabled = False
 
-        generateGridViewSessioni_Columns()
+            RadGridViewElencoSessioni.AutoGenerateColumns = False
 
-        ' Clear zTableInvio_SS
-        deleteFromZtable()
+            generateGridViewSessioni_Columns()
 
-        loadVecchieSessioni()
+            ' Clear zTableInvio_SS
+            deleteFromZtable()
 
-        RadLabelStruttura.Text = My.Settings.Struttura
-        RadLabelStruttura1.Text = My.Settings.Struttura
-        RadLabelStruttura2.Text = My.Settings.Struttura
-        Dim custColor = Color.FromArgb(My.Settings.Color2.Substring(0, 3), My.Settings.Color2.Substring(5, 3), My.Settings.Color2.Substring(10, 3))
+            loadVecchieSessioni()
 
-        RadPageViewSettingsPage.BackColor = custColor
+            RadLabelStruttura.Text = My.Settings.Struttura
+            RadLabelStruttura1.Text = My.Settings.Struttura
+            RadLabelStruttura2.Text = My.Settings.Struttura
+            Dim custColor = Color.FromArgb(My.Settings.Color2.Substring(0, 3), My.Settings.Color2.Substring(5, 3), My.Settings.Color2.Substring(10, 3))
+
+            RadPageViewSettingsPage.BackColor = custColor
+        Catch ex As Exception
+            ' Cattura l'errore e lo registra in un file di log o lo visualizza nella finestra di output del debug.
+            ' Per esempio:
+            Debug.WriteLine("Errore durante il caricamento del form: " & ex.Message)
+            ' Oppure, se si desidera salvare il log in un file:
+            Using writer As New StreamWriter("log.txt", True)
+                writer.WriteLine("Errore durante il caricamento del form: " & ex.ToString())
+            End Using
+        End Try
 
     End Sub
 
@@ -380,18 +396,22 @@ Public Class mainForm
         End Try
         Dim protocollo As String = Ricevuta.protocollo
 
-        'MsgBox(Ricevuta.descrizioneEsito)
-        updateProtocollo(protocollo, currentSessione, Ricevuta)
+        If protocollo Is Nothing Then
+            MsgBox("Errore: " & Ricevuta.descrizioneEsito & vbCrLf &
+                   "Invio non effettuato")
+        Else
+            updateProtocollo(protocollo, currentSessione, Ricevuta)
 
-        For Each s As RigaSessione In SessioniList.Where(Function(ses) ses.idEstrazione = currentSessione.idEstrazione)
-            s.DataInvio = Now
-            s.Protocollo = protocollo
-            s.Stato = "XML Inviato"
-            s.EsitoElaborazione = Ricevuta.codiceEsito & " - " & Ricevuta.descrizioneEsito
-        Next
+            For Each s As RigaSessione In SessioniList.Where(Function(ses) ses.idEstrazione = currentSessione.idEstrazione)
+                s.DataInvio = Now
+                s.Protocollo = protocollo
+                s.Stato = "XML Inviato"
+                s.EsitoElaborazione = Ricevuta.codiceEsito & " - " & Ricevuta.descrizioneEsito
+            Next
+            RadGridViewElencoSessioni.DataSource = Nothing
+            RadGridViewElencoSessioni.DataSource = SessioniList.OrderByDescending(Function(s) s.idEstrazione)
+        End If
 
-        RadGridViewElencoSessioni.DataSource = Nothing
-        RadGridViewElencoSessioni.DataSource = SessioniList.OrderByDescending(Function(s) s.idEstrazione)
 
     End Sub
     Public Function CriptaStringa(ByVal s As String) As String
@@ -992,6 +1012,7 @@ Public Class mainForm
     End Function
 
     Private DT_Settings As DataTable = Nothing
+
     Private Sub InsertOrUpdateTableSettings()
 
         DT_Settings = DataBase.LoadDT_Settings(DB)
