@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAggiornamento Service References e configurazione progetto\n\nAggiornati i riferimenti ai servizi web \\(DettaglioErrori730Service, EsitoInvioDatiSpesa730Service, InvioTelematicoSpeseSanitarie730p, RicevutaPdf730Service\\) e configurazione applicazione.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}

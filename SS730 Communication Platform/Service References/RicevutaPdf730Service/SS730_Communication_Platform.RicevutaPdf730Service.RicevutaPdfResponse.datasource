@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="RicevutaPdfResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>SS730_Communication_Platform.RicevutaPdf730Service.RicevutaPdfResponse, Service References.RicevutaPdf730Service.Reference.vb, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>SS730_Communication_Platform.RicevutaPdf730Service.RicevutaPdfResponse, Service References.RicevutaPdf730Service.Reference.vb.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

@@ -713,6 +713,10 @@ Public Class mainForm
                 newInput.codiceAsl = r.Item("codiceASL")
                 newInput.codiceSSA = r.Item("codiceSSA")
 
+                If newInput.dataEmissione Is Nothing Then
+                    Dim debug = 1
+                End If
+
                 ' Qui spaghettata
                 ' C'è un problema con la struttura Radiologia Mostacciano quando emette fatture con sezionale C Via Cina
                 ' Il codice SSA che leggiamo dal file è quello di Radiologia Mostacciano sesionale R ovver 011400 mentre qiello C è 020210
