@@ -76,6 +76,9 @@
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(TargetDir)TS730_Data.mdb" copy "$(ProjectDir)Resources\TS730_Data_Example.mdb" "$(TargetDir)TS730_Data.mdb"</PostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />

@@ -71,14 +71,10 @@ SS730 Communication Platform/
      - Codici identificativi struttura (Regione, ASL, SSA)
      - Percorso predefinito per creazione XML
 
-2. **Database locale**:
-   - Copiare `SS730 Communication Platform/Resources/TS730_Data_Example.mdb` nella cartella di output della build (es. `bin/Debug/` o `bin/Release/`)
-   - Rinominare il file in `TS730_Data.mdb`
-
-   Oppure, in alternativa, da riga di comando:
-   ```batch
-   copy "SS730 Communication Platform\Resources\TS730_Data_Example.mdb" "SS730 Communication Platform\bin\Debug\TS730_Data.mdb"
-   ```
+2. **Database locale** (automatico):
+   - Il database `TS730_Data.mdb` viene copiato automaticamente nella cartella di output durante la build
+   - Il file viene creato solo se non esiste già (per non sovrascrivere dati esistenti)
+   - Il template si trova in `SS730 Communication Platform/Resources/TS730_Data_Example.mdb`
 
 ### Ambienti
 
