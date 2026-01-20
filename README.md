@@ -63,12 +63,22 @@ SS730 Communication Platform/
 
 ### Setup iniziale
 
-1. Copiare `App.config.example` in `App.config`
-2. Configurare in `App.config`:
-   - Credenziali utente (NomeUtente, Password, Pincode)
-   - Codice fiscale proprietario
-   - Codici identificativi struttura (Regione, ASL, SSA)
-   - Percorso predefinito per creazione XML
+1. **Configurazione applicazione**:
+   - Copiare `SS730 Communication Platform/App.config.example` in `SS730 Communication Platform/App.config`
+   - Configurare in `App.config`:
+     - Credenziali utente (NomeUtente, Password, Pincode)
+     - Codice fiscale proprietario
+     - Codici identificativi struttura (Regione, ASL, SSA)
+     - Percorso predefinito per creazione XML
+
+2. **Database locale**:
+   - Copiare `SS730 Communication Platform/Resources/TS730_Data_Example.mdb` nella cartella di output della build (es. `bin/Debug/` o `bin/Release/`)
+   - Rinominare il file in `TS730_Data.mdb`
+
+   Oppure, in alternativa, da riga di comando:
+   ```batch
+   copy "SS730 Communication Platform\Resources\TS730_Data_Example.mdb" "SS730 Communication Platform\bin\Debug\TS730_Data.mdb"
+   ```
 
 ### Ambienti
 
