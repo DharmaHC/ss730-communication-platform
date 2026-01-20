@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<configSections>
+		<sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+			<section name="SS730_Communication_Platform.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+		</sectionGroup>
+	</configSections>
+	<startup>
+		<supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8"/>
+	</startup>
+
+	<applicationSettings>
+		<SS730_Communication_Platform.My.MySettings>
+			<setting name="NomeUtente" serializeAs="String">
+				<value>YOUR_USERNAME</value>
+			</setting>
+			<setting name="Password" serializeAs="String">
+				<value>YOUR_PASSWORD</value>
+			</setting>
+			<setting name="Pincode" serializeAs="String">
+				<value>YOUR_PINCODE</value>
+			</setting>
+			<setting name="cfProprietario" serializeAs="String">
+				<value>AAABBB00A00A000A</value>
+			</setting>
+			<setting name="codRegione" serializeAs="String">
+				<value>000</value>
+			</setting>
+			<setting name="codSSA" serializeAs="String">
+				<value>0000</value>
+			</setting>
+			<setting name="codASL" serializeAs="String">
+				<value>000</value>
+			</setting>
+			<setting name="DefaultXmlPath" serializeAs="String">
+				<value>C:\</value>
+			</setting>
+			<setting name="Color1" serializeAs="String">
+				<value>233; 240; 249</value>
+			</setting>
+			<setting name="Struttura" serializeAs="String">
+				<value>NOME STRUTTURA</value>
+			</setting>
+			<setting name="Color2" serializeAs="String">
+				<value>233; 240; 249</value>
+			</setting>
+		</SS730_Communication_Platform.My.MySettings>
+	</applicationSettings>
+	<system.serviceModel>
+		<bindings>
+			<basicHttpBinding>
+				<binding name="InvioTelematicoSS730pMtomPortBinding">
+					<security mode="Transport"/>
+				</binding>
+				<binding name="DettaglioErrori730PortBinding">
+					<security mode="Transport"/>
+				</binding>
+				<binding name="EsitoInvioDatiSpesa730PortBinding">
+					<security mode="Transport"/>
+				</binding>
+				<binding name="RicevutaPdf730PortBinding">
+					<security mode="Transport"/>
+				</binding>
+			</basicHttpBinding>
+		</bindings>
+		<!-- Ambiente di TEST -->
+<!--
+		<client>
+			<endpoint address="https://invioSS730pTest.sanita.finanze.it/InvioTelematicoSS730pMtomWeb/InvioTelematicoSS730pMtomPort"
+				binding="basicHttpBinding" bindingConfiguration="InvioTelematicoSS730pMtomPortBinding"
+				contract="InvioTelematicoSpeseSanitarie730p.InvioTelematicoSS730pMtom"
+				name="InvioTelematicoSS730pMtomPort" />
+			<endpoint address="https://invioSS730pTest.sanita.finanze.it/EsitoStatoInviiWEB/DettaglioErrori730Service"
+				binding="basicHttpBinding" bindingConfiguration="DettaglioErrori730PortBinding"
+				contract="DettaglioErrori730Service.DettaglioErrori730" name="DettaglioErrori730Port" />
+			<endpoint address="https://invioSS730pTest.sanita.finanze.it/EsitoStatoInviiWEB/EsitoInvioDatiSpesa730Service"
+				binding="basicHttpBinding" bindingConfiguration="EsitoInvioDatiSpesa730PortBinding"
+				contract="EsitoInvioDatiSpesa730Service.EsitoInvioDatiSpesa730"
+				name="EsitoInvioDatiSpesa730Port" />
+			<endpoint address="https://invioSS730pTest.sanita.finanze.it/Ricevute730ServiceWeb/ricevutePdf"
+				binding="basicHttpBinding" bindingConfiguration="RicevutaPdf730PortBinding"
+				contract="RicevutaPdf730Service.RicevutaPdf730" name="RicevutaPdf730Port" />
+		</client>
+-->
+		<!-- Ambiente di PRODUZIONE -->
+		<client>
+			<endpoint address="https://invioSS730p.sanita.finanze.it/InvioTelematicoSS730pMtomWeb/InvioTelematicoSS730pMtomPort" binding="basicHttpBinding" bindingConfiguration="InvioTelematicoSS730pMtomPortBinding" contract="InvioTelematicoSpeseSanitarie730p.InvioTelematicoSS730pMtom" name="InvioTelematicoSS730pMtomPort"/>
+			<endpoint address="https://invioSS730p.sanita.finanze.it/EsitoStatoInviiWEB/DettaglioErrori730Service" binding="basicHttpBinding" bindingConfiguration="DettaglioErrori730PortBinding" contract="DettaglioErrori730Service.DettaglioErrori730" name="DettaglioErrori730Port"/>
+			<endpoint address="https://invioSS730p.sanita.finanze.it/EsitoStatoInviiWEB/EsitoInvioDatiSpesa730Service" binding="basicHttpBinding" bindingConfiguration="EsitoInvioDatiSpesa730PortBinding" contract="EsitoInvioDatiSpesa730Service.EsitoInvioDatiSpesa730" name="EsitoInvioDatiSpesa730Port"/>
+			<endpoint address="https://invioSS730p.sanita.finanze.it/Ricevute730ServiceWeb/ricevutePdf" binding="basicHttpBinding" bindingConfiguration="RicevutaPdf730PortBinding" contract="RicevutaPdf730Service.RicevutaPdf730" name="RicevutaPdf730Port"/>
+		</client>
+	</system.serviceModel>
+</configuration>

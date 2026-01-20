@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# App.config contiene credenziali sensibili - usare App.config.example come template
+**/App.config
